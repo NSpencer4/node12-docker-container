@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
-RUN sudo apt update \
-  && sudo apt install curl
+RUN apt update \
+  && apt install curl
   && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
   && apt-get update \
   && apt-get install -y nodejs \
