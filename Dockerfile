@@ -1,6 +1,8 @@
 FROM ubuntu:bionic
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+RUN sudo apt update \
+  && sudo apt install curl
+  && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
   && apt-get update \
   && apt-get install -y nodejs \
   && apt-get install -y build-essential \
