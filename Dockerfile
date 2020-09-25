@@ -7,6 +7,7 @@ RUN apt update -y \
   && apt-get install -y nodejs \
   && apt-get install -y build-essential \
   && npm install -g npm@6 \
+  && npm rebuild \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD ["/bin/bash"]
